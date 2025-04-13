@@ -1,0 +1,12 @@
+server.host: "0.0.0.0"
+server.shutdownTimeout: "5s"
+server.ssl.enabled: true
+server.ssl.key: /usr/share/kibana/config/certs/kibana/kibana.key
+server.ssl.certificate: /usr/share/kibana/config/certs/kibana/kibana.crt
+
+elasticsearch.hosts: [ "https://elasticsearch:9200" ]
+elasticsearch.username: ${KIBANA_USERNAME}
+elasticsearch.password: ${KIBANA_PASSWORD}
+elasticsearch.ssl.certificateAuthorities: ["/usr/share/kibana/config/certs/ca/ca.crt"]
+
+monitoring.ui.container.elasticsearch.enabled: true
